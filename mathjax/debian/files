@@ -1,0 +1,4 @@
+fonts-mathjax-extras_2.7.4+dfsg-1_all.deb fonts optional
+fonts-mathjax_2.7.4+dfsg-1_all.deb fonts optional
+libjs-mathjax_2.7.4+dfsg-1_all.deb javascript optional
+mathjax_2.7.4+dfsg-1_amd64.buildinfo javascript optional

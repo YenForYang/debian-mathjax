@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Tue, 15 May 2018 18:04:35 +0300
+Source: mathjax
+Binary: libjs-mathjax fonts-mathjax fonts-mathjax-extras
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: all
+Version: 2.7.4+dfsg-1
+Distribution: unstable
+Urgency: medium
+Maintainer: Dmitry Shachnev <mitya57@debian.org>
+Changed-By: Dmitry Shachnev <mitya57@debian.org>
+Description:
+ fonts-mathjax - JavaScript display engine for LaTeX and MathML (fonts)
+ fonts-mathjax-extras - JavaScript display engine for LaTeX and MathML (extra fonts)
+ libjs-mathjax - JavaScript display engine for LaTeX and MathML
+Changes:
+ mathjax (2.7.4+dfsg-1) unstable; urgency=medium
+ .
+   * Update Vcs fields for migration to salsa.debian.org.
+   * New upstream release.
+   * Update packer and combiner templates from upstream.
+   * Bump Standards-Version to 4.1.4, no changes needed.
+Checksums-Sha1:
+ 0ba7b5676fecc26fd7e60c1773a53ec95c922c2d 674620 fonts-mathjax-extras_2.7.4+dfsg-1_all.deb
+ 957e928d6f7a8b07f00b9fed68249f2d5902e929 2209480 fonts-mathjax_2.7.4+dfsg-1_all.deb
+ 5638d47e94eb4bd1501e2d194898494f61f1a859 5657872 libjs-mathjax_2.7.4+dfsg-1_all.deb
+ 172cebe963864f8c47f4161352871a970c02bd79 7145 mathjax_2.7.4+dfsg-1_amd64.buildinfo
+Checksums-Sha256:
+ 909b991d32ddb3f787b0926b85ea80aa4d98f7b5b8897d56a8078e962b66dc81 674620 fonts-mathjax-extras_2.7.4+dfsg-1_all.deb
+ 1a04bcababee54fc2c77c568e3fd4ab5e2db78d85aacbca47eca1a7284e7e55c 2209480 fonts-mathjax_2.7.4+dfsg-1_all.deb
+ 20eb455482a57e48773a5c897b6c9aaaf18866138d100b71d7ce25e06a81c7a9 5657872 libjs-mathjax_2.7.4+dfsg-1_all.deb
+ 60d9b893db593e83957f70f7c3b04415bcc4a3cfc1542bc10d250ee76a74a733 7145 mathjax_2.7.4+dfsg-1_amd64.buildinfo
+Files:
+ a7113732c7a9d5bf755f727e12b26312 674620 fonts optional fonts-mathjax-extras_2.7.4+dfsg-1_all.deb
+ 1ac115d189a53157bc502aba5339def3 2209480 fonts optional fonts-mathjax_2.7.4+dfsg-1_all.deb
+ 107128193f7fe3723424ed1d660b97ed 5657872 javascript optional libjs-mathjax_2.7.4+dfsg-1_all.deb
+ f75b470d1313fd9422bcfb43c9b299de 7145 javascript optional mathjax_2.7.4+dfsg-1_amd64.buildinfo

@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# This file was originally written by Joey Hess and Craig Small.
+
+include /usr/share/dpkg/pkg-info.mk
+
+UPSTREAM_VERSION = $(DEB_VERSION_UPSTREAM:+dfsg=)
+
+DELETED_FILES = config extensions jax localization \
+	unpacked/extensions/a11y/mathjax-sre.js \
+	unpacked/extensions/a11y/mathmaps \
+	unpacked/extensions/a11y/wgxpath.install.js \
+	fonts/HTML-CSS/TeX/png
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	./debian/packer/packMJ --force
+	./debian/combiner/combineMJ --force
+
+override_dh_auto_clean:
+	rm -rfv config/ extensions/ jax/ localization/
+	rm -fv MathJax.js
+
+get-orig-source:
+	uscan --noconf --download-current-version --no-symlink
+	gunzip -c ../$(UPSTREAM_VERSION).tar.gz | \
+		tar --delete $(addprefix MathJax-$(UPSTREAM_VERSION)/,$(DELETED_FILES)) | \
+		xz -z > ../mathjax_$(UPSTREAM_VERSION)+dfsg.orig.tar.xz
